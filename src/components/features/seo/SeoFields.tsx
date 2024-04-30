@@ -11,8 +11,6 @@ const generateUrl = (locale: string, slug: string) =>
 export const SeoFields = ({
   pageTitle,
   pageDescription,
-  noindex,
-  nofollow,
   canonicalUrl,
   shareImagesCollection,
 }: SeoFieldsFragment) => {
@@ -31,8 +29,8 @@ export const SeoFields = ({
       title={pageTitle || undefined}
       description={pageDescription || undefined}
       canonical={canonicalUrl || url || ''}
-      nofollow={nofollow || false}
-      noindex={noindex || false}
+      nofollow
+      noindex
       languageAlternates={languageAlternates}
       openGraph={{
         type: 'website',
